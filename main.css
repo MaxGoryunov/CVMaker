@@ -24,7 +24,7 @@ main {
     height: 2000px;
 }
 
-form.registration {
+form.registration, form.authorisation {
     background: var(--block-bg);
     padding: 15px;
     border-radius: 10px;
