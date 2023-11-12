@@ -2,9 +2,14 @@
     --body-bg: #efecec;
     --header-bg: #f6f2f2;
     --block-bg: rgb(233, 229, 229);
+    --secondary-text: rgb(130, 130, 130);
 }
 body {
     background: var(--body-bg);
+}
+
+.cont-block {
+    background-color: var(--block-bg);
 }
 
 .top-header {
@@ -19,6 +24,10 @@ body {
     padding-left: 10px;
     float: left;
 }
+.top-header > .logo > span {
+    color: var(--secondary-text);
+}
+
 main {
     padding-top: 90px;
     height: 2000px;
@@ -31,4 +40,19 @@ form.registration, form.authorisation {
 }
 form.registration > h2 {
     text-align: center;
+}
+
+div.card {
+    border: none;
+}
+div.cv-card {
+    margin-bottom: 15px;
+    max-width: 48%;
+}
+div.cv-card > div > div.col-md-4 {
+    background-color: var(--secondary-text);
+
+}
+button.cv-add {
+    margin: 10px auto;
 }
