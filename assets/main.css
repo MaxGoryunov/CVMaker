@@ -34,12 +34,21 @@ main {
     height: 2000px;
 }
 
+div.info-block {
+    background-color: var(--block-bg);
+    padding: 15px;
+    border-radius: 10px;
+}
+div.info-block > h2 {
+    text-align: center;
+}
+
 form.registration, form.authorisation {
     background: var(--block-bg);
     padding: 15px;
     border-radius: 10px;
 }
-form.registration > h2 {
+form.registration > h2, form.authorisation > h2 {
     text-align: center;
 }
 
