@@ -3,9 +3,13 @@
     --header-bg: #f6f2f2;
     --block-bg: rgb(248, 248, 248);
     --secondary-text: rgb(130, 130, 130);
+    --border: #000000 solid 1px;
+    --adobe-red: #ff0000;
+    --darker-red: #C20000;
 }
 body {
     background: var(--body-bg);
+    font: "Times New Roman", serif;
 }
 
 .cont-block {
@@ -17,6 +21,7 @@ body {
     /*padding-bottom: 5px;*/
     width: 100vw;
     z-index: 100;
+    border-bottom: var(--border);
 }
 .top-header > .logo {
     font-size: 2.5em;
@@ -34,10 +39,11 @@ main {
     height: 2000px;
 }
 
-div.info-block {
+.info-block {
     background-color: var(--block-bg);
     padding: 15px;
     border-radius: 10px;
+    border: var(--border);
 }
 div.info-block > h2 {
     text-align: center;
@@ -58,13 +64,39 @@ div.card {
 div.cv-card {
     margin-bottom: 15px;
     max-width: 48%;
+    border-radius: 15px;
+    border: var(--border);
 }
 div.cv-card > div > div.col-md-4 {
     background-color: var(--secondary-text);
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
 
 }
 button.cv-add {
     margin: 10px auto;
+}
+.btn-action {
+    margin: 10px auto;
+}
+.btn-action, .btn-action > a {
+    padding: 0;
+    /* border: var(--darker-red) solid 1px; */
+    background-color: var(--adobe-red);
+    padding: 7px 15px;
+    /* font-size: 1.1em; */
+    color: white;
+    text-decoration: none;
+}
+.btn-action > a {
+    transition: inherit;
+    display: block;
+    padding: 10px 15px;
+}
+.btn-action:hover, .btn-action:hover > a {
+    background-color: var(--darker-red);
+    color: white;
 }
 
 ul.list-group, ul.list-group > li {
