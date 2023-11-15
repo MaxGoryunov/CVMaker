@@ -13,6 +13,36 @@
     <link rel="stylesheet" href="./assets/main.css" />
   </head>
   <body>
+    <div
+      class="modal fade"
+      id="logoutModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">
+              Logout
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Are you sure you want to log out?</div>
+          <div class="modal-footer">
+            <a href="./authorisation.html" class="btn btn-action">Yes</a>
+            <button type="button" class="btn btn-subaction" data-bs-dismiss="modal">No</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="top-header position-fixed">
       <div class="d-flex flex-row justify-content-between">
         <div class="logo">CV<span>Maker</span></div>
