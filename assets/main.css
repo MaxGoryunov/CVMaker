@@ -12,6 +12,10 @@ body {
     font: "Times New Roman", serif;
 }
 
+h2 {
+    margin-bottom: 15px;
+}
+
 .cont-block {
     background-color: var(--block-bg);
 }
@@ -21,7 +25,7 @@ body {
     /*padding-bottom: 5px;*/
     width: 100vw;
     z-index: 100;
-    border-bottom: var(--border);
+    /* border-bottom: var(--border); */
 }
 .top-header > .logo {
     font-size: 2.5em;
@@ -43,7 +47,7 @@ main {
     background-color: var(--block-bg);
     padding: 15px;
     border-radius: 10px;
-    border: var(--border);
+    /* border: var(--border); */
 }
 div.info-block > h2 {
     text-align: center;
@@ -65,7 +69,7 @@ div.cv-card {
     margin-bottom: 15px;
     max-width: 48%;
     border-radius: 15px;
-    border: var(--border);
+    /* border: var(--border); */
 }
 div.cv-card > div > div.col-md-4 {
     background-color: var(--secondary-text);
@@ -96,6 +100,15 @@ button.cv-add {
 }
 .btn-action:hover, .btn-action:hover > a {
     background-color: var(--darker-red);
+    color: white;
+}
+
+.btn-subaction {
+    margin: 10px auto;
+    border: var(--adobe-red) solid 2px;
+}
+.btn-subaction:hover {
+    background-color: var(--adobe-red);
     color: white;
 }
 
