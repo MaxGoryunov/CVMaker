@@ -25,9 +25,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">
-              Logout
-            </h1>
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Logout</h1>
             <button
               type="button"
               class="btn-close"
@@ -38,7 +36,13 @@
           <div class="modal-body">Are you sure you want to log out?</div>
           <div class="modal-footer">
             <a href="./authorisation.html" class="btn btn-action">Yes</a>
-            <button type="button" class="btn btn-subaction" data-bs-dismiss="modal">No</button>
+            <button
+              type="button"
+              class="btn btn-subaction"
+              data-bs-dismiss="modal"
+            >
+              No
+            </button>
           </div>
         </div>
       </div>
@@ -83,7 +87,11 @@
               </div>
               <div class="mb-3">
                 <label class="form-label">Education</label>
-                <textarea class="form-control" id="education" rows="3"></textarea>
+                <textarea
+                  class="form-control"
+                  id="education"
+                  rows="3"
+                ></textarea>
               </div>
               <div class="mb-3">
                 <label class="form-label">Password</label>
@@ -92,8 +100,11 @@
               <div class="mb-3">
                 <label class="form-label">Confirm password</label>
                 <input type="password" class="form-control" id="confirm" />
+                <div class="invalid-feedback" id="invalidPassword">Passwords do not match</div>
               </div>
-              <button type="submit" class="btn btn-action">Register</button>
+              <button type="submit" class="btn btn-action" id="register-button">
+                Register
+              </button>
             </form>
           </div>
           <div class="col-md-2"></div>
@@ -105,5 +116,21 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script>
+      let submit = document.getElementById("register-button");
+      submit.addEventListener("click", (event) => {
+        event.preventDefault();
+        let password = document.querySelector("#password").value;
+        let confirm = document.querySelector("#confirm").value;
+        // console.log(password, confirm);
+        if (password != confirm) {
+          // console.log("here");
+          document.querySelector("#invalidPassword").style.display = "block";
+        } else {
+          document.querySelector("#invalidPassword").style.display = "none";
+        }
+      });
+      
+    </script>
   </body>
 </html>
