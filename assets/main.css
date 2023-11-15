@@ -27,7 +27,7 @@ h2 {
     z-index: 100;
     /* border-bottom: var(--border); */
 }
-.top-header > .logo {
+.top-header .logo {
     font-size: 2.5em;
     font-weight: bold;
     padding-bottom: 5px;
@@ -35,8 +35,29 @@ h2 {
     float: left;
     color: var(--adobe-red);
 }
-.top-header > .logo > span {
+.top-header .logo > span {
     color: var(--secondary-text);
+}
+.top-header .personal {
+    padding: 10px 40px 0 0;
+}
+.top-header .personal img {
+    filter: invert(0%) sepia(96%) saturate(0%) hue-rotate(82deg) brightness(105%) contrast(103%);
+    height: 30px;
+    width: auto;
+    /* margin-top: 5px; */
+    -webkit-transition : -webkit-filter 200ms ease-in-out;
+}
+.top-header .personal img:hover {
+    filter: invert(13%) sepia(92%) saturate(7326%) hue-rotate(1deg) brightness(99%) contrast(113%);
+    -webkit-transition : -webkit-filter 200ms ease-in-out;
+}
+.top-header .personal > .user-name {
+    float: left;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 2px;
 }
 
 main {
@@ -111,6 +132,7 @@ button.cv-add {
 .btn-subaction {
     margin: 10px auto;
     border: var(--adobe-red) solid 2px;
+    color: var(--adobe-red);
 }
 .btn-subaction:hover {
     background-color: var(--adobe-red);
